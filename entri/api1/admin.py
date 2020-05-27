@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Candidate, Interviewer
-# Register your models here.
-admin.site.register(Candidate)
-admin.site.register(Interviewer)
+
+
+admin.site.register(Candidate) #Register Model Candidate
+admin.site.register(Interviewer) #Register Model Interviewer
