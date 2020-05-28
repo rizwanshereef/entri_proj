@@ -9,8 +9,7 @@ class Candidate(models.Model):
     start_time =  models.TimeField()
     end_time = models.TimeField()
 
-    def __str__(self):
-        return self.name
+  
 
 #model for Interviewer
 class Interviewer(models.Model):
@@ -19,5 +18,4 @@ class Interviewer(models.Model):
     start_time =  models.TimeField()
     end_time = models.TimeField()
 
-    def __str__(self):
-        return self.name
+    

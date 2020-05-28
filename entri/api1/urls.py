@@ -1,12 +1,14 @@
 from django.urls import include,path
 from rest_framework import routers
-from .import views
+# from .import views
+from .views import HRView,CandidateViewSet, InterviewerViewSet
 
+# inp=views.HRViewSet
 router = routers.DefaultRouter()
-router.register(r'candidates', views.CandidateViewSet)
-router.register(r'interviewer', views.InterviewerViewSet)
-
+router.register(r'candidates', CandidateViewSet)
+router.register(r'interviewer', InterviewerViewSet)
 urlpatterns =[
     path('',include(router.urls)),
-    path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),
+    path('hr/',HRView.as_view(), name="Input"),
+
 ]

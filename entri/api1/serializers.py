@@ -12,3 +12,4 @@ class InterviewerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Interviewer
         fields = ['id','name','date','start_time','end_time']
+
