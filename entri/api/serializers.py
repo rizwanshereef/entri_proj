@@ -5,11 +5,11 @@ from .models import Candidate, Interviewer
 class CandidateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Candidate
-        fields= ['id','name','email_address','phone','date','start_time','end_time']
+        fields= ['candidate_id','name','email_address','phone','date','start_time','end_time']
 
 #serializer for Interviewer
 class InterviewerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Interviewer
-        fields = ['id','name','date','start_time','end_time']
+        fields = ['interviewer_id','name','date','start_time','end_time']
 
