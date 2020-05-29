@@ -10,7 +10,7 @@ source env/bin/activate
 ~~~
 2. Git Repo
 ~~~
-git clone https://github.com/rizwanshereef/entri_proj.git
+git clone https://github.com/rizwanshereef/interview_scheduler.git
 ~~~
 3. You can install the required dependencies using the command
 ~~~
