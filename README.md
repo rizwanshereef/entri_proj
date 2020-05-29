@@ -35,7 +35,7 @@ Interview scheduling is done via REST api endpoints implemented in Django python
 
 ### API Endpoints Summary 
 
-#### [..candidates/ ]
+#### [./candidates/ ]
 
   ***Scope*** 
 
@@ -49,8 +49,21 @@ Interview scheduling is done via REST api endpoints implemented in Django python
   * Phone
   * Start_Date
   * End_Date
+  
+ ***JSON Format*** 
+ ~~~
+{
+    "candidate_id": null,
+    "name": "",
+    "email_address": "",
+    "phone": null,
+    "date": null,
+    "start_time": null,
+    "end_time": null
+}
+~~~
     
-#### [..interviewer/ ]
+#### [./interviewer/ ]
 
 ***Scope***
 
@@ -63,7 +76,18 @@ API to register the interviewer available slots.
   * Start_time
   * End_time
 
-#### [..hr/ ]
+***JSON Format***
+~~~
+{
+    "interviewer_id": null,
+    "name": "",
+    "date": null,
+    "start_time": null,
+    "end_time": null
+}
+~~~
+
+#### [./hr/ ]
 
 ***Scope***
 
@@ -72,3 +96,12 @@ API to return scheduled interviews
 ***API Parameters***
   * Can_id  (Candidate Id)
   * Int_id  (Interviewer Id)
+
+***JSON Format***
+
+~~~
+{
+  "can_id": null,
+  "int_id" : null
+}
+~~~
