@@ -54,7 +54,6 @@ class HRView(APIView):
             message = "Invalid Interviewer ID"
             return Response({'message':message})
         
-        print(type(candidate))
 
 # Assign model values to variables for computation
         candidate_name= candidate.name
@@ -86,8 +85,8 @@ class HRView(APIView):
                 slot_start = datetime.combine(dt.today(), slot_start_time)
 
 #Check if slots satisfies the 1 hour slot duration 
-                if slot_start_time and slot_end_time: 
-                    if  (slot_start - slot_end).seconds < 3600:
+                if slot_start and slot_end: 
+                    if  (slot_end - slot_start).seconds < 3600:
                         message = "No slot available"
                     else:
                     
